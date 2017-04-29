@@ -4,13 +4,14 @@ from werkzeug import secure_filename
 from werkzeug.serving import run_simple
 from tree import *
 
-curpath = os.path.dirname(__file__).replace('\\','/')
-UPLOAD_FOLDER = curpath + '/uploads/'
+#curpath = os.path.dirname(__file__).replace('\\','/')
+UPLOAD_FOLDER = '/uploads/'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
-app.static_folder = 'static'
+app.static_folder = '/static'
+app.template_folder = '/templates'
 app.secret_key = 'key'
 
 n = None
