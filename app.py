@@ -5,13 +5,14 @@ from werkzeug.serving import run_simple
 from tree import *
 
 #curpath = os.path.dirname(__file__).replace('\\','/')
-UPLOAD_FOLDER = '/uploads/'
+UPLOAD_FOLDER = 'uploads/'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
-app.static_folder = '/static'
-app.template_folder = '/templates'
+app.config['SERVER_NAME'] = '0.0.0.0'
+app.static_folder = 'static'
+app.template_folder = 'templates'
 app.secret_key = 'key'
 
 n = None
@@ -97,5 +98,7 @@ def clustering():
             pf1 = n.migrationProbs(dates, mutRate, 1, effective)
             pf2 = n.migrationProbs(dates, mutRate, 2, effective)
     return redirect('/')
-    
-app.run()
+
+if __name__=='__main__':
+    port = int(os.environ.get("PORT", 33507))
+    app.run(host='0.0.0.0', port=port)

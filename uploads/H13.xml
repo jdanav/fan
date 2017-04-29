@@ -1,0 +1,352 @@
+                        <Node Id="H13" HG="C14872T">
+						  <Node Id="KF451624" HG="T466C,A11650G,C14830T" />	
+                          <Node Id="H13a" HG="C2259T">
+                            <Node Id="H13a1" HG="A4745G">
+                              <Node Id="H13a1a" HG="C13680T">
+							    <Node Id="JX153696" HG="" />
+								<Node Id="KF162187" HG="" />
+								<Node Id="KC170990" HG="" />
+								<Node Id="AY495107" HG="" />
+                                <Node Id="H13a1a1" HG="G7337A,T13326C">
+								  <Node Id="JQ704682" HG="" />
+                                  <Node Id="H13a1a1a" HG="G14831A" >
+								    <Node Id="JQ702582" HG="A7049G,T7964C" />	 
+									<Node Id="JQ705796" HG="C7813T,C10421T,C16111T,T16209C,C16218T" /> 
+									<Node Id="JQ706004" HG="A6605G,G6755A,T16271C" /> 
+									<Node Id="H13a1a1a+152" HG="T152C" >
+									   <Node Id="JQ705981" HG="" />	
+									   <Node Id="KF161108" HG="" />	
+									   <Node Id="KF161699" HG="" />	
+									   <Node Id="KF161731" HG="" />	
+									   <Node Id="KF162567" HG="" />	
+									   <Node Id="KF162982" HG="" />	
+									   <Node Id="NA12878" HG="" />	
+									   <Node Id="JX153335" HG="" />	
+									   <Node Id="KR271612" HG="T15779C" />
+									   <Node Id="H13a1a1a+152+16181" HG="A16181G" >				   	
+										  <Node Id="JX153945" HG="" />
+										  <Node Id="KF162311" HG="" />
+										  <Node Id="KF162585" HG="" />
+										  <Node Id="KF162893" HG="" />
+									   </Node>
+									   <Node Id="KF162171" HG="G9055A" />
+									   <Node Id="JQ703169" HG="G16129A" />
+									   <Node Id="JX944820" HG="C13851T" />	
+									   <Node Id="JX153866" HG="G11778A!" />
+									   <Node Id="KF161775" HG="G5460A" />
+									   <Node Id="JQ702303" HG="T16189C" /> 
+									   <Node Id="JQ704351" HG="A15603G" />
+									   <Node Id="H13a1a1a+152+790" HG="G709A,C2557T" > 	
+										  <Node Id="JQ703373" HG="" />
+										  <Node Id="JQ703650" HG="A16037G" /> 
+									   </Node>
+									</Node>
+								  </Node>															
+                                  <Node Id="H13a1a1b" HG="T14727C" >
+								     <Node Id="JQ704234" HG="A214G,G16129A" />
+									 <Node Id="JQ703386" HG="G16153A" />
+								  </Node>						 														  
+                                  <Node Id="H13a1a1c" HG="T15412C" >
+								     <Node Id="AM263191" HG="T16093C" />
+									 <Node Id="H13a1a1c+13820" HG="T13820C" >
+									    <Node Id="KP638565" HG="C2443T"/>
+										<Node Id="KM047189" HG="G15927A" />
+									 </Node>
+								  </Node>										  								  
+                                  <Node Id="H13a1a1+16261" HG="C16261T" >
+									<Node Id="JQ704549" HG="" />
+									<Node Id="pre-H13a1a1d" HG="G709A" >
+									   <Node Id="KM047215" HG="T14783C" />				 
+								       <Node Id="H13a1a1d" HG="A8842G,T16311C!" >
+									     <Node Id="JQ703808" HG="T9083C,C16301T" />	
+										 <Node Id="JX153624" HG="C6927T" />	
+										 <Node Id="JX153825" HG="T195C" />
+										 <Node Id="H13a1a1d1" HG="T10101C" >
+										    <Node Id="JQ704841" HG="" />
+											<Node Id="HG00178" HG="" />
+											<Node Id="HG00324" HG="" />
+											<Node Id="KR712271" HG="" />
+											<Node Id="JQ702829" HG="" />	
+											<Node Id="JQ702835" HG="T152C" />
+											<Node Id="AY339410" HG="T8588A" />
+											<Node Id="KC763391" HG="C2259T!,A4745G!,C13680T!,G13759A" /> 
+											<Node Id="H13a1a1d1+2259" HG="C2259T!" >
+											   <Node Id="KC763400" HG="C3549T,C11549T,T13617C,C13680T!" />	
+											   <Node Id="KC763390" HG="G3010A,A4745G!,C16301T" />
+											   <Node Id="KC763387" HG="T12811C" />	
+											</Node>		
+										 </Node>	
+										</Node>		
+									</Node>	
+								   </Node>																							  
+                                  <Node Id="H13a1a1e" HG="G7830A" >
+								    <Node Id="JQ702022" HG="" /> 
+									<Node Id="JQ703421" HG="T131C,A5812G" />
+									<Node Id="JQ702399" HG="G9755A,G16129A" />
+								  </Node>
+								  <Node Id="H13a1a1+9708" HG="T9708C" >
+								    <Node Id="JQ324527" HG="" />	
+									<Node Id="JQ324538" HG="" />	
+									<Node Id="JQ324583" HG="" />
+									<Node Id="JQ324531" HG="A10792G" /> 
+								  </Node>	
+								  <Node Id="JQ324598" HG="G7521A,G9612A,T11025C" />
+								  <Node Id="GU945543" HG="A7125G,A14053G" /> 		
+								  <Node Id="AY738995" HG="A93G,G13042A" /> 
+								  <Node Id="H13a1a1+146" HG="T146C" > 
+								     <Node Id="HM852889" HG="" />
+									 <Node Id="H13a1a1+146+679" HG="C679A,T16297C" >
+									    <Node Id="JX153111" HG="" /> 
+										<Node Id="JX153013" HG="T195C,A7804G" />	
+									 </Node>	
+								  </Node>	
+								  <Node Id="H13a1a1+150" HG="C150T" >
+								     <Node Id="JQ704483" HG="A9336G,T11485C" />
+									 <Node Id="JQ705345" HG="T152C,T6221C" /> 
+									 <Node Id="KF451623" HG="A14280G" />
+									 <Node Id="JQ701818" HG="" /> 
+								  </Node>
+								  <Node Id="H13a1a1+12397" HG="A12397G" >
+								     <Node Id="JQ705399" HG="" />
+									 <Node Id="JQ704072" HG="" />
+								  </Node>
+								  <Node Id="H13a1a1+3921" HG="C3921T,T14221C" >
+								     <Node Id="JQ703053" HG="G1709A,A2524T,T4117C" />
+									 <Node Id="HG01510" HG="T14757C" />
+								  </Node>
+								  <Node Id="JQ704113" HG="T152C" />	
+								  <Node Id="JQ703035" HG="C16257T" />
+								  <Node Id="EU684448" HG="G709A,G10688A" /> 
+								  <Node Id="GQ478574" HG="C16188T,T16311C" />	
+								</Node>
+                                <Node Id="H13a1a2" HG="A13542G">			                                
+                                  <Node Id="H13a1a2a" HG="C9449T,A15712G,C16278T!,T16311C!" >
+								     <Node Id="JQ703208" HG="T12738C,G13980A" />
+									 <Node Id="H13a1a2a+11563" HG="C11563T" >
+									    <Node Id="EU370982" HG="A385G" /> 
+										<Node Id="AY738997" HG="" /> 
+									 </Node>								 							  
+                                  </Node>
+                                  <Node Id="H13a1a2b" HG="T146C!,G2701A,G12651A,A15758G,C16187T" >
+								     <Node Id="KF451105" HG="" />	
+									 <Node Id="KF451109" HG="" />	
+									 <Node Id="KF451123" HG="" />	
+									 <Node Id="EU600347" HG="" />
+									 <Node Id="EU600346" HG="A93G" />	
+								  </Node>
+								  <Node Id="AM263186" HG="G709A,C16193T" />						  							  
+                                </Node>														
+                                <Node Id="H13a1a3" HG="C14239T" >
+								  <Node Id="KC911290" HG="" />
+								  <Node Id="JQ703193" HG="T11368C,C14281T,A14683G" />
+								  <Node Id="JQ701842" HG="A4775G" />	
+								</Node>					  																											
+                                <Node Id="H13a1a4" HG="A8381G" >
+								  <Node Id="KM101884" HG="" />	
+								  <Node Id="FJ560455" HG="A6716G" />
+								</Node>									  													
+                                <Node Id="H13a1a5_JQ705726" HG="A82G,G9801A,A15758G" />		   																			
+                                <Node Id="H13a1a6_JQ704176" HG="G228A,A16207G" />
+								<Node Id="JQ703858" HG="T9233C,T15721C,A16180G,T16311C" />
+								<Node Id="JQ705098" HG="A200G,G6480A,G15355A" /> 	
+								<Node Id="JQ704218" HG="" />	
+								<Node Id="JQ704814" HG="C12061T,T14484C,C14770T" />
+								<Node Id="JX153688" HG="A5582G" />
+								<Node Id="KF162456" HG="A1438G!,C2059T,T4939G" />
+								<Node Id="H13a1a+9827" HG="C9827T" >
+								   <Node Id="JQ702112" HG="G8790A" />
+								   <Node Id="KF161167" HG="A302C,G13708A" />
+								</Node>	
+								<Node Id="H13a1a+12930" HG="A12930G" >
+								   <Node Id="JX153299" HG="" />
+								   <Node Id="JX153480" HG="" />
+								   <Node Id="JQ705508" HG="C13011T" />	
+								</Node>
+								<Node Id="H13a1a+16269" HG="A16269G" >
+								   <Node Id="JQ704316" HG="" />
+								   <Node Id="JQ704928" HG="T16304C" />
+								</Node>
+								<Node Id="AY738996" HG="" />
+								<Node Id="AY713982" HG="G12771A,A16230G" />
+								<Node Id="AY495149" HG="G14560A,G16129A" />
+								<Node Id="JQ705780" HG="C7849T" />
+								<Node Id="JQ703863" HG="C3150T,A3637G,G9287A" />
+								<Node Id="JQ701948" HG="A153G,G9575T,G16153A" />
+								<Node Id="JQ702658" HG="C7313T" />
+								<Node Id="JQ705194" HG="T146C,G8764A" />
+								<Node Id="JQ705423" HG="T5618C,C15913T" />					
+                              </Node>
+							  <Node Id="H13a1+152" HG="T152C" >
+							    <Node Id="EU597515" HG="T146C,T16311C" />
+								<Node Id="H13a1d" HG="C16234T" >
+								   <Node Id="JX153573" HG=""/>
+								   <Node Id="AM263187" HG="T16209C" />
+								   <Node Id="KF260957" HG="G1888A" />	
+								</Node>
+							  </Node>
+							  <Node Id="H13a1b_HG01173" HG="A153G,A4231G,A7903G,C16291T" />
+							  <Node Id="H13a1c" HG="A3744G,G16244A" >
+							     <Node Id="JN712772" HG="T789C,G8251A,C16214T" />
+								 <Node Id="H13a1c+270" HG="G207A,C8293T,T8388C,A16399G" >	
+									<Node Id="KF889440" HG="" />
+									<Node Id="KC765915" HG="A9135G" />
+								 </Node>
+							  </Node>		  					 							  
+                            </Node>						
+                            <Node Id="H13a2" HG="G709A">
+							  <Node Id="AY339409" HG="T14857C" />		
+                              <Node Id="H13a2a" HG="A1008G" >
+							     <Node Id="KC577357" HG="" />
+								 <Node Id="EF556150" HG="A183G,A7184G,C11151T" />	
+								 <Node Id="H13a2a+3156" HG="A3156G,G3834A,G4820A,G5773A" >	
+								    <Node Id="KC911335" HG="" />
+								    <Node Id="KC911416" HG="" />
+									<Node Id="KC911326" HG="C10751T" />	
+								 </Node>	
+								 <Node Id="H13a2a+153" HG="A153G,A200G,A12076G,T16243C" >
+								    <Node Id="KC911327" HG="" />
+									<Node Id="KF450826" HG="" />
+									<Node Id="KF450847" HG="" />
+									<Node Id="KF450856" HG="T8555C" />	
+									<Node Id="KF450840" HG="T5794C" />	
+								 </Node>
+								 <Node Id="AY713980" HG="G1768A" />	
+								 <Node Id="HG01589" HG="C4014T,G5460A,A6125G,A9359G,G15894A" />		
+								 <Node Id="NA12275" HG="T15784C" />	
+								 <Node Id="H13a2a+8952" HG="T8952C,T13326C" >
+								    <Node Id="H13a2a+8952+152" HG="T152C,A4021T" >
+									   <Node Id="HG03849" HG="" />
+									   <Node Id="HG03692" HG="C4335T" />	
+									   <Node Id="HG03995" HG="A15758G" />	
+									</Node>
+									<Node Id="HG03844" HG="T8602C,C11407T,A16051G" />	
+								 </Node>					 								 
+								 <Node Id="H13a2a1" HG="C4011T,A12662G" >	
+								    <Node Id="KC911458" HG="T131C,T4977C,G6366A,T11017C,A12082G,C16290T" />
+									<Node Id="H13a2a1+8648" HG="G8648A,G11914A,C15154T,T16362C" >	
+									    <Node Id="KC911443" HG="" />
+										<Node Id="HG02651" HG="" />
+									</Node>	
+									<Node Id="KC911369" HG="T195C,C13695T" />	
+								 </Node>
+								 <Node Id="JX153117" HG="T9824C,G10680A" />	
+								 <Node Id="KC577358" HG="A234G,T4947C,A5894G,T16311C" />	
+							  </Node>
+							  
+							  <Node Id="pre-H13a2c" HG="C16256T" >	
+							     <Node Id="KF162247" HG="A193G,A249,A263G!,A4769G!,A8860G!,G16129A" />	
+								 <Node Id="H13a2c" HG="T6827C,A15218G,G16319A" >	
+								    <Node Id="KC911338" HG="A73G,G16145A,T16189C,T16362C" />
+									<Node Id="H13a2c1" HG="A189G,C16148T" >	
+									   <Node Id="AM263190" HG="A93G,G9489A,G16129A" />
+									   <Node Id="H13a2c1+193" HG="A193G,C4577T,T15412C" >
+									    <Node Id="H13a2c1+193+10237" HG="T10237C,G16129A">	
+									       <Node Id="KF161847" HG="T6827C!" />
+										   <Node Id="H13a2c1+193+10237+249" HG="A249G" >
+										      <Node Id="KF162093" HG="" />
+										  	  <Node Id="KF162291" HG="" />
+										  	  <Node Id="KF162691" HG="" />
+										  	  <Node Id="KF162974" HG="" />
+										  	  <Node Id="KF162279" HG="A263G!" />
+										   </Node>
+										</Node>
+										<Node Id="H13a2c1+193+249" HG="A249G" >
+										   <Node Id="JQ703878" HG="T152C,A215G" />
+										   <Node Id="H13a2c1+193+249+16193" HG="C16193T" >
+										      <Node Id="KF161603" HG="" />
+											  <Node Id="H13a2c1+193+249+16193+4820" HG="G4820A" >
+											    <Node Id="KF162138" HG="" />
+											    <Node Id="KF162940" HG="" />
+											  </Node>
+										   </Node>
+									    </Node>
+									   </Node>
+									</Node>
+								  </Node>
+							   </Node>
+                              <Node Id="H13a2b" HG="T13762g">
+							    <Node Id="H13a2b+13152" HG="A13152t,T14857C" >		
+								   <Node Id="JX153617" HG="" />	
+								   <Node Id="JX171087" HG="" />	
+                                </Node>								
+                                <Node Id="H13a2b1" HG="T4639C,T15001C,T16311C!" >
+								   <Node Id="KC911600" HG="" />		
+                                   <Node Id="JQ701816" HG="" />	
+								   <Node Id="EF556156" HG="A7322G" />	
+								   <Node Id="HM852757" HG="C16527T" />	
+								   <Node Id="AM263189" HG="T13762g!,G13889A" />
+								</Node>		
+                                <Node Id="H13a2b2" HG="T10463C,C13575T" >
+								   <Node Id="H13a2b2a" HG="T15713g" >
+								      <Node Id="KF162595" HG="C2259T!,T10463C!,C13575T!" />	
+									  <Node Id="H13a2b2a+7340" HG="G7340A" >	
+									     <Node Id="KF162062" HG="" />
+									     <Node Id="KF162907" HG="" />
+										 <Node Id="KF163001" HG="A6929G" />	
+										 <Node Id="KF162025" HG="G14663A" />
+										 <Node Id="JX153809" HG="A5933G" />	
+									  </Node>	
+									  <Node Id="JF828090" HG="G14476A" />	
+									  <Node Id="JQ705699" HG="A8700G,G10993A" />	
+									  <Node Id="KC911361" HG="T8093C,T13812C" />
+								   </Node>		
+								   <Node Id="H13a2b2+2757" HG="A2757G" >
+									   <Node Id="H13a2b2+257+16129" HG="G16129A" >	
+										  <Node Id="KC911295" HG="" />
+										  <Node Id="KC911555" HG="" />
+									   </Node>	
+									   <Node Id="KJ733699" HG="T16075C" />	
+								   </Node>
+								</Node>
+                                <Node Id="H13a2b3_JQ705524" HG="A73G!,G143A,A2264G,A11641G" />
+								<Node Id="H13a2b4_KC911469" HG="A93G,G1438A,T5196C,A8266G,G9548A,G15217A,A15662G" />	
+								<Node Id="H13a2b5" HG="C14863T,C16278T!" >
+									<Node Id="HQ658464" HG="" />
+									<Node Id="JX153198" HG="G3736A,T12954C,G16129A!" />	
+								</Node>
+							  </Node>						
+                            </Node>
+                          </Node>
+                          <Node Id="H13b" HG="C4107T">
+						    <Node Id="AM263188" HG="T173C,T199C,C2280T,A2730G,G6383A,G8485A,T13635C,C16134T,T16263C,T16362C" />
+                            <Node Id="H13b1+200" HG="A200G,T11485C,C16261T">						  	                              
+							    <Node Id="GU228506" HG="T152C,T12015C,A13327G,T14757C,T16362C" />
+								<Node Id="H13b1+200+720" HG="T720C,T10274C,G16048A" >	
+									<Node Id="JQ664541" HG="A10550G" />
+									<Node Id="JQ664536" HG="T10790C,C15247T,G15617A" />	
+								</Node>												
+                                <Node Id="H13b1a" HG="T13620C" >
+									<Node Id="JQ704111" HG="" /> 
+									<Node Id="EU052289" HG="" />
+									<Node Id="JQ704375" HG="A200G!" />
+									<Node Id="KP733894" HG="T195C,G9554A,C16192T,C16261T!" />
+								</Node>													
+                                <Node Id="H13b1b" HG="A7403G,G11440A,C16291T" >
+								    <Node Id="NA20771" HG="" />
+									<Node Id="NA20806" HG="C4086T,A14118G,T15804C" />	
+								    <Node Id="H13b1b+16311" HG="T16311C">
+									   <Node Id="JQ704475" HG="" />
+									   <Node Id="JQ704147" HG="C3462T,C16147T" />	
+								    </Node>		
+								</Node>									
+                            </Node>
+							<Node Id="H13b2" HG="C2713T,T15109C" >	
+								<Node Id="KC911454" HG="T11050G" />	
+								<Node Id="H13b2+10909" HG="T10909C,T16362C" >
+									<Node Id="JQ7043132" HG="" />
+									<Node Id="HM0443022" HG="A234G" />
+								</Node>																	
+                            </Node>
+						  </Node>
+                          <Node Id="H13c" HG="G8206A">
+							<Node Id="KC911462" HG="C10202T,A11314G,A14152G" />	
+                            <Node Id="H13c1" HG="A5568G" > 
+							     <Node Id="JQ703657" HG="A971G,C3622T,A9389G,T10601C,A14189G,C16192T,C16201T" />
+								 <Node Id="HG00233" HG="T195C,A1842G,T8870C,T16263C" />
+							</Node>
+							<Node Id="H13c2" HG="G143A,G16129A!,A16300G" >	
+								<Node Id="KC911276" HG="A153G,C15406T" />	
+								<Node Id="HQ234355" HG="G8557A,G10427A,G11188A,A14818G" />	
+							</Node>
+                          </Node>
+                        </Node>
