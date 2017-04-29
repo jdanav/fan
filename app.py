@@ -97,4 +97,4 @@ def clustering():
             pf2 = n.migrationProbs(dates, mutRate, 2, effective)
     return redirect('/')
     
-app.run(debug=True)
+app.run()
