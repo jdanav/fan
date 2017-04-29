@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<div class="graphtree" style="min-width:{{ 58 * n.tree|length }}px;">
+{% with layer = 0 %}
+  {% for node in n.tree.values() %}
+  	{% if node.layer > layer %}
+    <ul>
+    <li>
+      <a class="{% if node.name in n.leaves %}{{ node.isSource() }}{% elif 'f1' in node.extra and not 'f2' in node.extra %}{{ 'f1' }}{% elif 'f2' in node.extra and not 'f1' in node.extra %}{{ 'f2' }}{% elif 'f1' in node.extra and 'f2' in node.extra %}{{ 'f1f2' }}{% endif %}" {% if node.mutations|length > 0 %}title="{{'\n'.join(node.mutations)}}"{% endif %}> {{ node.name }} </a>
+  	{% elif node.layer < layer %}
+    {% for i in range(layer-node.layer) %}</li></ul>{% endfor %}</li>
+    <li>
+      <a class="{% if node.name in n.leaves %}{{ node.isSource() }}{% elif 'f1' in node.extra and not 'f2' in node.extra %}{{ 'f1' }}{% elif 'f2' in node.extra and not 'f1' in node.extra %}{{ 'f2' }}{% elif 'f1' in node.extra and 'f2' in node.extra %}{{ 'f1f2' }}{% endif %}" {% if node.mutations|length > 0 %}title="{{'\n'.join(node.mutations)}}"{% endif %}> {{ node.name }} </a>
+    {% elif node.layer == layer %}
+    </li>
+    <li>
+      <a class="{% if node.name in n.leaves %}{{ node.isSource() }}{% elif 'f1' in node.extra and not 'f2' in node.extra %}{{ 'f1' }}{% elif 'f2' in node.extra and not 'f1' in node.extra %}{{ 'f2' }}{% elif 'f1' in node.extra and 'f2' in node.extra %}{{ 'f1f2' }}{% endif %}" {% if node.mutations|length > 0 %}title="{{'\n'.join(node.mutations)}}"{% endif %}> {{ node.name }} </a>
+  	{% endif %}
+  	{% set layer = node.layer %}
+  {% endfor %}
+</ul>
+{% endwith %}
+</div>

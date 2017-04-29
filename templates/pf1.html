@@ -1,0 +1,56 @@
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="{{ url_for('static', filename='trees.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body style="margin: 0 !important;">
+  <div id="headerdiv">
+    <table class="tree">
+      <style>
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+      </style>
+      <tr class="header">
+        <th>
+          <a {% if pf1 %}href="{{ url_for('download', table='pf1') }}" download{% endif %}>
+            <img class='nimg' alt="Download table as TSV" title="Download table as TSV" src="{{ url_for('static', filename='download.png') }}"/>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="searchNode" onkeyup="searchNode();" placeholder=" Highlight node(s)"> &nbsp;&nbsp;&nbsp;
+          <a {% if pf1 %}href="{{ url_for('chart', which='range') }}" target="_blank"{% endif %}>
+            <img src="{{ url_for('static', filename='range.png') }}" title="{{ 'Plot migration probabilities\nfor given range' }}" alt="{{ 'Plot migration probabilities\nfor given range' }}" class="himg"></a>&nbsp;
+          <a {% if pf1 %}href="{{ url_for('chart', which='bars') }}" target="_blank"{% endif %}>
+            <img src="{{ url_for('static', filename='bars.png') }}" title="{{ 'Plot mean migration probabilities\nand deviation' }}" alt="{{ 'Plot mean migration probabilities\nand deviation' }}" class="himg"></a>&nbsp;
+          <a {% if pf1 %}href="{{ url_for('chart', which='stacks') }}" target="_blank"{% endif %}>
+            <img src="{{ url_for('static', filename='stacks.png') }}" title="{{ 'Plot individual\nmigration probabilities' }}" alt="{{ 'Plot individual\nmigration probabilities' }}" class="himg"></a>
+         </th>
+      </tr>
+    </table>
+  </div>
+  <div id="treediv">
+    <table id="tree" class="tree">
+      <colgroup>
+        <col>
+          {% if pf1 %}{% for item in pf1.values()[0] %}<col width="70">{% endfor %}{% endif %}
+      </colgroup>      
+      {% if pf1 %} 
+      <tr class="migheader"><td class="migcol"></td>{% for item in pf1.values()[0] %}<td>{{ item }}</td>{% endfor %}</tr>
+      {% for item in pf1.keys()[1:-2] %}
+      <tr id={{ item }} class="node">
+        <td id="{{ item }} " class="migcol">{{ item }}</td>{% for value in pf1[item] %}
+        <td>{{ value }}</td>
+      {% endfor %}{% endfor %}</tr>
+      {% for item in pf1.keys()[-2:] %}
+      <tr class="migheader">
+        <td id="{{ item }} " class="migcol">{{ item }}</td>{% for value in pf1[item] %}
+        <td>{{ value }}</td>
+      {% endfor %}</tr>
+    {% endfor %} {% endif %}
+    </table>
+  </div>
+  <div style="font-size:75%; height:15px; font-weight:bold; padding:.5em .5em; background-color:#ccc;">{% if pf1 %}Mutation rate: {{ pf1.keys()[0].split()[0] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% if pf1.keys()[0].split()[1] == 'True' %}Using effective number{% endif %}{% endif %}</div>
+</body>

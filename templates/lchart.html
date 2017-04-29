@@ -1,0 +1,80 @@
+<html>
+<head>
+<title></title>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+     google.charts.load('current', {packages: ['corechart','line']});  
+   </script>
+</head>
+<body style="height: 97%">
+{% if which=='stacks' %}
+<table cellspacing=0 cellpadding=0 style="width:100%; height: 100%"><tr>
+  <td style="width:50%"><div id="f1_stacks" style="height:100%"></div></td>
+  <td style="width:50%"><div id="f2_stacks" style="height:100%"></div></td>
+</tr></table>
+<script language="JavaScript">
+{% autoescape false %}
+
+function drawpf1() {
+  var data = google.visualization.arrayToDataTable([ ["Node" {% for i in pf1.values()[0] %}, '{{ i }}'{% endfor %}]
+    {% for i in pf1.keys()[1:-3] %}, {{ [i] + pf1[i] }} {% endfor %}]);
+
+  var options = { title: 'ƒ1', isStacked: 'percent', hAxis: { title: 'Probability for each migration',
+   minValue: 0, ticks: [0, .2, .4, .6, .8, 1], titleTextStyle: { italic:false}}, 'chartArea': {'width':'50%','height': '80%'}};
+
+  var chart = new google.visualization.BarChart(document.getElementById('f1_stacks'));
+   chart.draw(data, options);
+}
+
+function drawpf2() {
+  var data = google.visualization.arrayToDataTable([ ["Node" {% for i in pf2.values()[0] %}, '{{ i }}'{% endfor %}]
+    {% for i in pf2.keys()[1:-3] %}, {{ [i] + pf2[i] }} {% endfor %}]);
+
+  var options = { title: 'ƒ2', isStacked: 'percent', hAxis: { title: 'Probability for each migration',
+   minValue: 0, ticks: [0, .2, .4, .6, .8, 1], titleTextStyle: { italic:false}}, 'chartArea': {'width':'50%','height': '80%'}};
+
+  var chart = new google.visualization.BarChart(document.getElementById('f2_stacks'));
+   chart.draw(data, options);
+}
+{% endautoescape %}
+
+google.charts.setOnLoadCallback(drawpf1); google.charts.setOnLoadCallback(drawpf2);
+
+{% else %}
+
+<div id="container" style="width: 100%; height: 100%"></div>
+<script language="JavaScript">
+
+function drawChart() {
+   var data = new google.visualization.DataTable();
+   data.addColumn('string', 'Migration date');
+   data.addColumn('number', 'ƒ1');
+   {% if which == 'bars' %}data.addColumn({type:'number', role:'interval'});data.addColumn({type:'number', role:'interval'});{% endif %}
+   data.addColumn('number', 'ƒ2');
+   {% if which == 'bars' %}data.addColumn({type:'number', role:'interval'});data.addColumn({type:'number', role:'interval'});{% endif %}
+   data.addRows([{% for i in range(pf1.values()[0]|length-1) %} 
+    ['{{ pf1.values()[0][i] }}', {{ pf1.values()[-2][i] }},
+    {% if which=='bars' %}{{ pf1.values()[-2][i]-pf1.values()[-1][i] }},{{ pf1.values()[-2][i]+pf1.values()[-1][i] }},{% endif %}
+    {{ pf2.values()[-2][i] }}
+    {% if which=='bars' %},{{ pf2.values()[-2][i]-pf2.values()[-1][i] }},{{ pf2.values()[-2][i]+pf2.values()[-1][i] }}{% endif %}],
+    {% endfor %}
+    ['{{ pf1.values()[0][-1] }}', {{ pf1.values()[-2][-1] }},
+    {% if which=='bars' %}{{ pf1.values()[-2][-1]-pf1.values()[-1][-1] }},{{ pf1.values()[-2][-1]+pf1.values()[-1][-1] }},{% endif %}
+    {{ pf2.values()[-2][-1] }}
+    {% if which=='bars' %},{{ pf2.values()[-2][-1]-pf2.values()[-1][-1] }},{{ pf2.values()[-2][-1]+pf2.values()[-1][-1] }}{% endif %}]]);
+   
+   var options = {'title' : '', hAxis: { title: 'Migration date', format: '#', titleTextStyle: { italic:false}}, 
+   vAxis: { title: 'Mean contribution', titleTextStyle: { italic:false}}, colors: ['red','yellow'], 
+   lineWidth: 4, pointsVisible: true, pointSize: 0.5, intervals: { 'color': 'black'}};
+   var formatterX = new google.visualization.NumberFormat({groupingSymbol: '', fractionDigits: 0});
+   var formatterY = new google.visualization.NumberFormat({fractionDigits: 4});
+   formatterX.format(data,0); formatterY.format(data, 1); formatterY.format(data, 2);
+   
+   var chart = new google.visualization.{% if which=='range' %}Line{% else %}Column{% endif %}Chart(document.getElementById('container'));
+   chart.draw(data, options);}
+
+google.charts.setOnLoadCallback(drawChart);
+{% endif %}
+</script>
+</body>
+</html>

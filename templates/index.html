@@ -1,0 +1,121 @@
+<head>
+  <title>Founder Analysis</title>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body style='padding-top: 75px;'>
+  <div style='top:0; position: fixed; width: 99%; background: #f1f1f1;'>
+  <img id="logotype" src="{{ url_for('static', filename='logo.png') }}" title="pyRho + Flask">
+  <nav id="primary_nav_wrap">
+    <ul>
+        <form method="POST" enctype="multipart/form-data" style="margin-bottom: 0px;">
+          &nbsp;&nbsp;
+          <input type="image" id='upfig' alt="Select XML/ source-sink file" src="{{ url_for('static', filename='select_xl.png') }}" ;/>
+          <input type="file" id='upfile' title="Select XML/ source-sink file" name="treefile" /> 
+          &nbsp;
+          <input type="image" id='subfig' alt="Submit" src="{{ url_for('static', filename='submit_xl.png') }}"/>
+          <input type="submit" id='subfile' title="Submit file" />
+          &nbsp;&nbsp;&nbsp;
+          {% if n %} 
+          <img class='nimg' alt="Current tree file: {{ n.name }}" title="Current tree file:{{ '\n'+n.name }}" src="{{ url_for('static', filename='tree.png') }}"/>
+          {% endif %}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {% if n and t %}
+          <img class='nimg' alt="Current source-sink file: {{ t }}" title="Current source-sink file:{{ '\n'+t }}" src="{{ url_for('static', filename='types.png') }}"/>
+          {% endif %}
+          &nbsp;&nbsp;
+        </form>
+  <hr style="height:0pt; visibility: hidden; margin-bottom: -1px;" />
+      <li><a {% if n %}href="{{ url_for('graph')}}" target="_blank"{% endif %}}>Show tree as diagram</a></li>
+      <li><a href="#">Compute migration clusters</a>
+        <ul>
+          <li><a href="#">Range</a>
+            <ul>
+              <div class="userInput">
+                <form action="/migrations" method="POST" enctype="multipart/form-data">
+                  <fieldset>
+                    <legend>Start</legend>
+                    <input name='start' class=dates type=text pattern="^([1-9]|[1-9][0-9]+)$" value="1000">
+                  </fieldset>
+                  <fieldset>
+                    <legend>Stop</legend>
+                    <input name='stop' class=dates type=text pattern="^([1-9]|[1-9][0-9]+)$" value="10000">
+                  </fieldset>
+                  <fieldset>
+                    <legend>Step</legend>
+                    <input name='step' class=dates type=text pattern="^([1-9]|[1-9][0-9]+)$" value="100">
+                  </fieldset>
+                  <hr style='margin:1px; visibility: hidden;'>
+                  <fieldset>
+                    <legend>Mutation rate</legend>
+                    <input name='mutRate1' class='mutRate' type=text pattern="^([1-9]|[1-9][0-9]+)$" value="3500">
+                  </fieldset>
+                  <hr style='margin:2px; visibility: hidden;'>
+                  <input id="effective1" type="checkbox" name="effective" value="check"><label for="effective1">Effective number</label><br>
+                  <hr style='margin:2px; visibility: hidden;'>
+                  <input type=submit value='Compute clusters' name="range" {% if not t %} onclick='missingData()' {% endif %}>
+                </form>
+              </div>
+            </ul>
+          </li>
+          <li><a href="#">Comma-separated dates</a>
+            <ul>
+              <div class="userInput">
+                <form action="/migrations" method="POST" enctype="multipart/form-data">
+                  <fieldset>
+                    <legend>Migration dates</legend>
+                    <input name='dates' type="text" class=dates pattern="^([1-9]|[1-9][0-9]+)(,[1-9]|,[1-9][0-9]+)+$" value="200,1000,2500,10000">
+                  </fieldset>
+                  <hr style='margin:2px; visibility: hidden;'>
+                  <fieldset>
+                    <legend>Mutation rate</legend>
+                    <input name='mutRate2' class='mutRate' type=text pattern="^([1-9]|[1-9][0-9]+)$" value="3500">
+                  </fieldset>
+                  <hr style='margin:2px; visibility: hidden;'>
+                  <input id="effective2" type="checkbox" name="effective" value="check"><label for="effective2">Effective number</label><br>
+                  <hr style='margin:2px; visibility: hidden;'>
+                  <input type=submit value='Compute clusters' name="comma" {% if not t %} onclick='missingData()' {% endif %}>
+                </form>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+  <hr style="height:2pt; visibility: hidden; margin-bottom: -1px;" />
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'main')">Tree information</button>
+    <button class="tablinks" onclick="openTab(event, 'f1')"><i>ƒ</i>1 statistics</button>
+    <button class="tablinks" onclick="openTab(event, 'f2')"><i>ƒ</i>2 statistics</button>
+    <button class="tablinks" onclick="openTab(event, 'f1m')"><i>ƒ</i>1 founder analysis</button>
+    <button class="tablinks" onclick="openTab(event, 'f2m')"><i>ƒ</i>2 founder analysis</button>    
+  </div>
+
+  <div id="main" class="tabcontent">
+  <iframe src="{{ base }}" style="width: 100%; height: 80%" frameBorder="0"></iframe>
+  </div>
+
+  <div id="f1" class="tabcontent">
+  <iframe src="{{ f1 }}" style="width: 100%; height: 80%" frameBorder="0"></iframe>
+  </div>
+
+  <div id="f2" class="tabcontent">
+  <iframe src="{{ f2 }}" style="width: 100%; height: 80%" frameBorder="0"></iframe>
+  </div>
+
+  <div id="f1m" class="tabcontent">
+  <iframe src="{{ f1m }}" style="width: 100%; height: 80%" frameBorder="0"></iframe>
+  </div>
+
+  <div id="f2m" class="tabcontent">
+  <iframe src="{{ f2m }}" style="width: 100%; height: 80%" frameBorder="0"></iframe>
+  </div>
+
+</body>

@@ -1,0 +1,351 @@
+/* main */
+
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+
+#logotype {
+  z-index: 2;
+  float: right;
+  height: 60px;
+  position: relative;
+  right: 15px;
+  top: 5px;
+}
+
+#subfig {
+  height: 25px;
+  width: 78px;
+  position: absolute;
+}
+
+#subfile {
+  position: relative;
+  z-index: 2;
+  opacity: 0.0;
+  width: 78px;
+  height: 25px;
+}
+
+#upfig {
+  height: 25px;
+  width: 95px;
+  position: absolute;
+}
+
+#upfile {
+  position: relative;
+  z-index: 2;
+  opacity: 0.0;
+  width: 95px;
+  height: 25px;
+}
+
+.nimg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+
+}
+
+input[type="submit"] {
+  background-color: #eee;
+}
+
+/* tabs */
+
+div.tabcontent {
+  width: 100%;
+  border: none !important;
+  display: none;
+  border-top: none;
+}
+
+div.tab {
+    overflow: hidden;
+    border: none;
+    background-color: #f1f1f1;
+    display: inline-block;
+    border-radius: 10px 10px 0px 0px;
+}
+
+div.tab button {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 6px;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* tree div */
+
+.tree {
+  margin: 0%;
+  border-collapse: collapse;
+  font-size: 70%;
+  line-height: 1.1;
+  background: #FFF;
+  width: 100%;
+}
+
+.node {
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.leaf {
+  background-color: #ffffe0;
+  color: black;
+  cursor: default;
+}
+
+.node:hover, .leaf:hover,
+td.start:hover,
+td.end:hover {
+  background: #FF9;
+}
+
+th,
+td {
+  padding: .3em .5em;
+  text-align: left;
+}
+
+/* tree header div */
+
+.header {
+  background-color: #ccc;
+  font-weight: bold;
+  font-size: 105%;
+  height: 30px;
+}
+
+#treediv {
+  width: 100%;
+  max-height: 80%;
+  overflow: auto;
+  overflow-x: auto;
+}
+
+.himg {
+  height: 25px;
+  width: 25px;
+}
+
+#searchNode {
+  font-size: 90%;
+  width: 100px;
+  height: 25px;
+  vertical-align: top;
+}
+
+/* navbar */
+
+#primary_nav_wrap {
+  margin-top: 10px;
+}
+
+#primary_nav_wrap ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0
+}
+
+#primary_nav_wrap ul a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 15px;
+}
+
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0
+}
+
+#primary_nav_wrap ul li:hover {
+  background: #ccc
+}
+
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f1f1f1;
+  padding: 0
+}
+
+#primary_nav_wrap ul ul li {
+  float: none;
+  width: 200px
+}
+
+#primary_nav_wrap ul ul a {
+  line-height: 120%;
+  padding: 10px 15px
+}
+
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%
+}
+
+#primary_nav_wrap ul li:hover > ul {
+  display: block
+}
+
+/* clustering inputs */
+
+fieldset {
+  width: 110px;
+  padding: 2px;
+  border: 1px solid silver;
+  background: #ccc;
+}
+
+legend, 
+label[for="effective1"],
+label[for="effective2"] { 
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.userInput {
+  background: #ccc;
+  padding: .3em .6em;
+}
+
+.dates,
+.mutRate {
+  width: 106px;
+  font-size: 70%;
+  height: medium;
+}
+
+/* clustering divs */
+
+.migheader {
+  background-color: #ccc;
+  font-weight: bolder;
+  opacity: 1 !important;
+}
+
+/* tree graph */
+
+* {margin: 0; padding: 0;}
+
+.graphtree ul {
+  padding-top: 20px; position: relative;
+  transition: all 0.5s;
+}
+
+.graphtree li {
+  float: left; text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+.graphtree li::before, .graphtree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%; height: 20px;
+}
+.graphtree li::after{
+  right: auto; left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+
+.graphtree li:only-child::after, .graphtree li:only-child::before {
+  display: none;
+}
+
+.graphtree li:only-child{ padding-top: 0;}
+
+.graphtree li:first-child::before, .graphtree li:last-child::after{
+  border: 0 none;
+}
+
+.graphtree li:last-child::before{
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+
+.graphtree li:first-child::after{
+  border-radius: 5px 0 0 0;
+}
+
+.graphtree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0; height: 20px;
+}
+
+.graphtree li a{
+  border: 1px solid #ccc;
+  padding: 5px 0px;
+  text-decoration: none;
+  color: #000;
+  font-family: arial, verdana, tahoma;
+  font-size: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  white-space: pre;
+}
+
+.graphtree a[class="Source"] {
+  background-color: #333;
+  color: #fff;
+}
+
+.graphtree a[class="Sink"] {
+  background-color: #ccc;
+}
+
+.graphtree a[class="f1"] {
+  background-color: yellow;
+}
+
+.graphtree a[class="f2"] {
+  background-color: red;
+  color: #fff;
+}
+
+.graphtree a[class="f1f2"] {
+  background-color: orange;
+}
+
+.graphtree li a:hover, .graphtree li a:hover+ul li a {
+  background: #f1f1f1; 
+  color: #000; 
+  border: 1px solid #f1f1f1;
+}

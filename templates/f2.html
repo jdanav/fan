@@ -1,0 +1,80 @@
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="{{ url_for('static', filename='trees.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body style="margin: 0 !important;">
+  <div id="headerdiv">
+    <table class="tree">
+      <style>
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+
+      </style>
+      <colgroup>
+        <col width="600">
+          <col width="70">
+            <col width="70">
+              <col width="70">
+                <col width="70">
+                  <col width="70">
+      </colgroup>
+      <tr class="header">
+        <th>
+          <a {% if n %}href="{{ url_for('download', table='f1') }}" download{% endif %}><!---->
+            <img class='nimg' alt="Download table as TSV" title="Download table as TSV" src="{{ url_for('static', filename='download.png') }}"/>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="searchNode" onkeyup="searchNode();" placeholder=" Highlight node(s)"> &nbsp;&nbsp;&nbsp;
+          <input type="image" class='himg' src="{{ url_for('static', filename='expand.png') }}" title="Expand all branches" alt="Expand all" onclick="treetable_expandAll();">&nbsp;
+          <input type="image" class='himg' src="{{ url_for('static', filename='collapse.png') }}" title="Collapse all branches" alt="Collapse all" onclick="treetable_collapseAll();">&nbsp;
+          <input type="image" class='himg' src="{{ url_for('static', filename='toggle.png') }}" title="Toggle leaf visibility" alt="Toggle leaves" onclick="toggle();">
+        </th>
+        <th>Mutations</th>
+        <th>Type</th>
+        <th>Leaves</th>
+        <th><i>ƒ</i>2</th>
+        <th>Std. error</th>
+        <th><i>ƒ</i>2+</th>
+      </tr>
+    </table>
+  </div>
+  <div id="treediv">
+    <table id="tree" class="tree">
+      <colgroup>
+        <col width="600">
+          <col width="70">
+            <col width="70">
+              <col width="70">
+                <col width="70">
+                  <col width="70">
+      </colgroup>
+      {% if n %} {% for node in n.tree.values() %} {% if node.name in n.nodes %} {% with f2 = n.fN(node.name, 2) %}
+      <tr id={{ node.htmID }} class="node">
+        <td id="{{ node.name }} " onclick="treetable_toggleRow('{{ node.htmID }}');">{% for i in range(4*(node.layer-1)) %}&nbsp;{% endfor %}•&nbsp;{{ node.name }}</td>
+        <td {% if node.mutations|length > 0 %}title="{{'\n'.join(node.mutations)}}"{% endif %}>{{ node.mutations|length }}</td>
+        <td>{{ node.isSource()|join(' ') }}</td>
+        <td>{{ f2[0] }}</td>
+        <td>{{ f2[1] }}</td>
+        <td>{{ f2[2] }}</td>
+        <td>{{ n.f2plus(node.name) }}</td>
+      </tr>
+      {% endwith %} {% elif node.name in n.leaves %}
+      <tr id={{ node.htmID }} class="leaf">
+        <td id={{ node.name }} onclick="treetable_toggleRow('{{ node.htmID }}');">{% for i in range(4*(node.layer-1)) %}&nbsp;{% endfor %}•&nbsp;{{ node.name }}&nbsp;</td>
+        <td {% if node.mutations|length > 0 %}title="{{'\n'.join(node.mutations)}}"{% endif %}>{{ node.mutations|length }}</td>
+        <td>{{ node.isSource() }}</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+      </tr>
+      {% endif %} {% endfor %} {% endif %}
+    </table>
+  </div>
+  <div style="font-size:75%; height:15px; font-weight:bold; padding:.5em .5em; background-color:#ccc;">{% if n %}{{ n.nodes|length }} internal nodes and {{ n.leaves|length }} leaves in {{ n.layers|length }} layers ({{ n.nsrc if n.nsrc else 0 }} sources, {{ n.nsnk if n.nsnk else 0 }} sinks, {{ n.nudf if n.nudf else n.leaves|length }} undefined){% endif %}</div>
+</body>
