@@ -10,9 +10,7 @@ UPLOAD_FOLDER = 'uploads/'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
-app.config['SERVER_NAME'] = '0.0.0.0'
 app.static_folder = 'static'
-app.template_folder = 'templates'
 app.secret_key = 'key'
 
 n = None
